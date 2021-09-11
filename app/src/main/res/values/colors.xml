@@ -10,4 +10,5 @@
     <color name="secondary_text_color">#8E8989</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#B8B6B6</color>
+    <color name="active">#232323</color>
 </resources>
