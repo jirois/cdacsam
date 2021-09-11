@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">CDACSAM</string>
+    <string name="app_subtitle">Community Daily Case <br /> Search and Activity  <br />  Manager</string>
+    <string name="splash_btn_text">Get Started</string>
+    <string name="fragment_title">Quick tour</string>
+    <string name="splash_screen_one_title">Record Cases</string>
+    <string name="splash_screen_one_text">Press the button below to <br />begin recording cases today</string>
+    <string name="skip_btn_text">Skip</string>
+    <string name="splash_screen_two_title">Elicitation</string>
+    <string name="splash_screen_two_text">Press the button below to <br />begin eliciting cases today</string>
+    <string name="splash_screen_three_title">Client Proximity</string>
+    <string name="splash_screen_three_text">Press the button below to <br />begin recording cases today</string>
+    <string name="splash_screen_four_title">Achievement</string>
+    <string name="splash_screen_four_text">Press the button below to <br />begin recording cases today</string>
+    <string name="image_description">image</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="continue_btn_text">Continue</string>
 </resources>

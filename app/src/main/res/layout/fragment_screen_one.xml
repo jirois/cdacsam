@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.jinncyapps.cdacsam.splash.ScreenOne">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/onboarding_image"
+            android:contentDescription="@string/image_description" />
+
+        <TextView
+            android:id="@+id/tv_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splash_screen_one_title"
+            android:textSize="28sp"
+            android:textColor="@color/primary_text_color"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="25dp" />
+
+        <TextView
+            android:id="@+id/tv_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="top"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/splash_screen_one_text"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/x_text_size" />
+
+        <TextView
+            android:id="@+id/tv_btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_gravity="center"
+            android:layout_marginBottom="55dp"
+            android:text="@string/skip_btn_text"
+            android:textSize="@dimen/x_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/teal_200" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
