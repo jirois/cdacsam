@@ -1,4 +1,4 @@
-package com.jinncyapps.cdacsam.splash
+package com.jinncyapps.cdacsam.splash.onboarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,10 @@ import androidx.databinding.DataBindingUtil
 import com.google.android.material.tabs.TabLayoutMediator
 import com.jinncyapps.cdacsam.R
 import com.jinncyapps.cdacsam.databinding.FragmentViewPagerBinding
+import com.jinncyapps.cdacsam.splash.onboarding.screens.ScreenFour
+import com.jinncyapps.cdacsam.splash.onboarding.screens.ScreenOne
+import com.jinncyapps.cdacsam.splash.onboarding.screens.ScreenThree
+import com.jinncyapps.cdacsam.splash.onboarding.screens.ScreenTwo
 
 
 class ViewPager : Fragment() {

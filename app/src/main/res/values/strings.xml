@@ -4,16 +4,23 @@
     <string name="splash_btn_text">Get Started</string>
     <string name="fragment_title">Quick tour</string>
     <string name="splash_screen_one_title">Record Cases</string>
-    <string name="splash_screen_one_text">Press the button below to <br />begin recording cases today</string>
-    <string name="skip_btn_text">Skip</string>
+    <string name="splash_screen_one_text">Gives you access to your records</string>
+    <string name="skip_btn_text">Next</string>
     <string name="splash_screen_two_title">Elicitation</string>
-    <string name="splash_screen_two_text">Press the button below to <br />begin eliciting cases today</string>
+    <string name="splash_screen_two_text">Elicit partners for guidance</string>
     <string name="splash_screen_three_title">Client Proximity</string>
-    <string name="splash_screen_three_text">Press the button below to <br />begin recording cases today</string>
+    <string name="splash_screen_three_text">Locate where your client\'s partner are!</string>
     <string name="splash_screen_four_title">Achievement</string>
-    <string name="splash_screen_four_text">Press the button below to <br />begin recording cases today</string>
+    <string name="splash_screen_four_text">See your achievement and how to improve.</string>
     <string name="image_description">image</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="continue_btn_text">Continue</string>
+    <string name="password_hint">Password</string>
+    <string name="username_hint">Username</string>
+    <string name="email_hint">Email</string>
+    <string name="privacy_terms">By checking this box you to our TC</string>
+    <string name="log_in_text">Log In</string>
+    <string name="onboardingtitle">Quick Tour</string>
+    <string name="login_title">LOGIN</string>
 </resources>

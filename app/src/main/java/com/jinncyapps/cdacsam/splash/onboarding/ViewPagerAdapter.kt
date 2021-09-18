@@ -1,4 +1,4 @@
-package com.jinncyapps.cdacsam.splash
+package com.jinncyapps.cdacsam.splash.onboarding
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

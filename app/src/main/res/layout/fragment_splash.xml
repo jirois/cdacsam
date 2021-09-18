@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_splash_240x320"
+    android:layout_gravity="center"
+    android:background="@mipmap/ic_sp_720x1280"
     tools:context=".splash.SplashActivity">
 
     <TextView
@@ -20,38 +21,23 @@
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        style="@style/splash_one_text_style"
+        android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:lineSpacingMultiplier="1.2"
         android:text="@string/app_subtitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        style="@style/splash_one_text_style" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/start_text_btn"
-        style="@style/splash_one_text_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/shape_button_rounded"
-        android:padding="20dp"
-        android:text="@string/splash_btn_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

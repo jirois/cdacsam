@@ -7,4 +7,5 @@
         <item name="android:textSize">@dimen/x_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
+
 </resources>
