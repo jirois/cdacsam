@@ -2,4 +2,8 @@
 <resources>
     <dimen name="x_text_size">18sp</dimen>
     <dimen name="xx_text_size">24sp</dimen>
+    <dimen name="space_44dp">44dp</dimen>
+    <dimen name="space_42dp">42dp</dimen>
+    <dimen name="space_default">16dp</dimen>
+    <dimen name="space_33dp">33dp</dimen>
 </resources>

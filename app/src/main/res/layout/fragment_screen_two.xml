@@ -7,83 +7,78 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/cl_screen_two"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context="com.jinncyapps.cdacsam.splash.onboarding.screens.ScreenTwo">
 
         <TextView
             android:id="@+id/tv_onboarding_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space_44dp"
             android:fontFamily="@font/open_sans_bold"
             android:text="@string/onboardingtitle"
             android:textColor="@color/main_text_color"
             android:textSize="@dimen/x_text_size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+             />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="250dp"
             android:layout_height="240dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="42dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/space_default"
+            android:layout_marginTop="@dimen/space_42dp"
+            android:layout_marginEnd="@dimen/space_default"
+            android:layout_gravity="center"
             android:contentDescription="@string/image_description"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.434"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_onboarding_title"
             app:srcCompat="@drawable/ic_elicitation" />
 
         <TextView
             android:id="@+id/tv_text3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="@dimen/space_33dp"
             android:fontFamily="@font/open_sans_bold"
             android:gravity="center"
-            android:text="@string/splash_screen_one_title"
+            android:layout_gravity="center"
+            android:text="@string/splash_screen_two_title"
             android:textColor="@color/main_text_color"
             android:textSize="@dimen/xx_text_size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+          />
 
         <TextView
             android:id="@+id/cl_screen_three"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/open_sans"
             android:gravity="center"
             android:lineSpacingMultiplier="1.2"
-            android:text="@string/splash_screen_one_text"
+            android:layout_gravity="center"
+            android:text="@string/splash_screen_two_text"
             android:textColor="@color/ic_text_color"
             android:textSize="@dimen/x_text_size"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_text3" />
+            />
 
         <TextView
             android:id="@+id/tv_btn_continue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
             android:fontFamily="@font/open_sans_bold"
-            android:gravity="bottom"
             android:text="@string/skip_btn_text"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginBottom="50dp"
+            android:gravity="bottom"
             android:textColor="@color/teal_200"
             android:textSize="@dimen/x_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+             />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 </layout>
