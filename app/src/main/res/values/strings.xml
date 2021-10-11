@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">AuthenApp</string>
+    <string name="app_name">CDACSAM</string>
+
+    <!-- splash screen text -->
+    <string name="app_subtitle">Community Daily Case <br /> Search and Activity  <br />  Manager</string>
+    <string name="Splash_screens_title">Quick tour</string>
+    <string name="splash_screen_one_title">Record Cases</string>
+    <string name="splash_screen_one_text">Gives you access to your records</string>
+    <string name="skip_btn_text">Skip</string>
+    <string name="splash_screen_two_title">Elicitation</string>
+    <string name="splash_screen_two_text">Elicit partners for guidance</string>
+    <string name="splash_screen_three_title">Client Proximity</string>
+    <string name="splash_screen_three_text">Locate where your client\'s partner are!</string>
+    <string name="splash_screen_four_title">Achievement</string>
+    <string name="splash_screen_four_text">See your achievement and how to improve.</string>
+    <string name="image_description">image</string>
+
+
+
+
+
+
+
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="splash_onboarding_continue_btn_text">Continue</string>
+
 </resources>

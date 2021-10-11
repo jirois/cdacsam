@@ -9,17 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AuthenApp">
-        <activity android:name=".SignInActivity">
+        <activity android:name=".splash.IntroActivity"
+            android:theme="@style/Theme.AuthenApp.NoActionBar"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
-        <activity android:name=".SignUpActivity">
+        <activity
+            android:name=".splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AuthenApp.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
