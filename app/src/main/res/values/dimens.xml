@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Splash Screen Dimens -->
+    <dimen name="splash_sub_text_size">18sp</dimen>
+    <dimen name="splash_main_text_size">24sp</dimen>
+    <dimen name="splash_onboarding_screens_title_text_size">18sp</dimen>
+    <dimen name="splash_screen_title_margin_top_size">44dp</dimen>
+    <dimen name="splash_screen_image_margin_top_size">42dp</dimen>
+    <dimen name="splash_screen_image_margin_start_size">16dp</dimen>
+    <dimen name="splash_screen_image_margin_end_size">16dp</dimen>
+    <dimen name="splash_screen_title_text_size">24sp</dimen>
+    <dimen name="splash_screen_text_size">18sp</dimen>
+    <dimen name="splash_screen_onboarding_image_width">250dp</dimen>
+    <dimen name="splash_screen_onboarding_image_height">240dp</dimen>
+    <dimen name="splash_screen_onboarding_title_margin_top_size">33dp</dimen>
+    <dimen name="splash_onboarding_btn_padding_bottom_size">7dp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+</resources>
