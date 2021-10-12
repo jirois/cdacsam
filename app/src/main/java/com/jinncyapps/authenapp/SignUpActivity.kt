@@ -1,101 +1,174 @@
 package com.jinncyapps.authenapp
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PatternMatcher
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Patterns
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.jinncyapps.authenapp.utils.textWatcher
+import com.jinncyapps.authenapp.databinding.ActivitySignUpBinding
+import java.util.regex.Pattern
+import kotlin.system.measureTimeMillis
 
 class SignUpActivity : AppCompatActivity() {
-    lateinit var emailText: EditText
-    lateinit var passwordText: EditText
-    lateinit var signUpBtn: Button
+    private lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
+        if (Build.VERSION.SDK_INT >= 21) {
+            val window = this.window
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            window.statusBarColor = this.resources.getColor(R.color.purple_700)
+        }
 
-        emailText = findViewById(R.id.et_email)
-        passwordText = findViewById(R.id.et_password)
-        signUpBtn = findViewById(R.id.btn_signup)
+//        val usernameInput: String = binding.etSigninUsername.text.toString().trim()
+//        val emailInput: String = binding.etSigninEmail.text.toString().trim()
+//        val passwordInput: String = binding.etSigninPassword.text.toString().trim()
 
-        emailText.addTextChangedListener(authTextWatcher)
-        passwordText.addTextChangedListener(authTextWatcher)
-
-
-
-
-
-        signUpBtn.setOnClickListener {
-            val email: String = emailText.text.toString()
-            val password: String = passwordText.text.toString()
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(
-                    OnCompleteListener<AuthResult> { task ->
-
-                        // Hide the progress dialog
+        binding.chTermConditionCheck.setOnCheckedChangeListener { buttonView, isChecked ->
+            binding.btnSignup.isEnabled = isChecked
+        }
 
 
-                        // If the registration is successfully done
-                        if (task.isSuccessful) {
 
-                            // Firebase registered user
-                            val firebaseUser: FirebaseUser = task.result!!.user!!
-                            // Registered Email
-                            val registeredEmail = firebaseUser.email!!
-
-                            Toast.makeText(
-                                this@SignUpActivity,
-                                "you have successfully registered with email id $registeredEmail.",
-                                Toast.LENGTH_SHORT
-                            ).show()
-
-                            /**
-                             * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
-                             * and send him to Intro Screen for Sign-In
-                             */
-
-
-                            /**
-                             * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
-                             * and send him to Intro Screen for Sign-In
-                             */
-                             startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
-                            // Finish the Sign-Up Screen
-//                            finish()
-                        } else {
-                            Toast.makeText(
-                                this@SignUpActivity,
-                                task.exception!!.message,
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                    })
+        binding.btnSignup.setOnClickListener {
+            registerUser()
 
         }
     }
 
 
-  private val authTextWatcher: TextWatcher = object:TextWatcher{
-      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-      override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-          val email: String = emailText.text.toString().trim()
-          val password: String = passwordText.text.toString().trim()
+    private fun registerUser(){
+        val usernameInput: String = binding.etSigninUsername.text.toString().trim()
+        val emailInput: String = binding.etSigninEmail.text.toString().trim()
+        val passwordInput: String = binding.etSigninPassword.text.toString().trim()
 
-          signUpBtn.isEnabled = email.isNotEmpty() && password.isNotEmpty()
-      }
+        if (!validateEmail(emailInput)
+        ) {
 
-      override fun afterTextChanged(s: Editable?) {}
+                if (!validatePassword(passwordInput)){
+                    return
+                }
 
-  }
+        }
+        Toast.makeText(
+            this@SignUpActivity,
+            "email: $emailInput, password: $passwordInput",
+            Toast.LENGTH_SHORT
+        ).show()
+
+
+//        FirebaseAuth.getInstance().createUserWithEmailAndPassword(emailInput, passwordInput)
+//            .addOnCompleteListener(
+//                OnCompleteListener<AuthResult> { task ->
+//
+//                    // Hide the progress dialog
+//
+////                    hideProgressDialog()
+//                    // If the registration is successfully done
+//                    if (task.isSuccessful) {
+//
+//                        // Firebase registered user
+//                        val firebaseUser: FirebaseUser = task.result!!.user!!
+//                        // Registered Email
+//                        val registeredEmail = firebaseUser.email!!
+//
+//                        Toast.makeText(
+//                            this@SignUpActivity,
+//                            "you have successfully registered with email id $registeredEmail.",
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//
+//                        /**
+//                         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
+//                         * and send him to Intro Screen for Sign-In
+//                         */
+//
+//
+//                        /**
+//                         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
+//                         * and send him to Intro Screen for Sign-In
+//                         */
+//                        startActivity(
+//                            Intent(
+//                                this@SignUpActivity,
+//                                SignInActivity::class.java
+//                            )
+//                        )
+//                        // Finish the Sign-Up Screen
+////                            finish()
+//                    } else {
+//                        Toast.makeText(
+//                            this@SignUpActivity,
+//                            task.exception!!.message,
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//                    }
+//                })
+//
+
+
+
+}
+
+
+    private fun validateName(name: String): Boolean{
+        if (name.isEmpty()){
+            binding.signinTextinputlayoutUsername.error = "Username can't be empty"
+            return false
+        } else if(name.length > 20){
+            binding.signinTextinputlayoutUsername.error = "Username too long"
+            return false
+        } else {
+            binding.signinTextinputlayoutUsername.error = null
+            return true
+        }
+    }
+
+    private fun validateEmail(email: String): Boolean{
+        if (email.isEmpty()){
+            binding.signinTextinputlayoutEmail.error = "Email Field can't be empty"
+            return false
+        } else if (email.length < 6){
+            binding.signinTextinputlayoutEmail.error = "Email too short"
+            return false
+        }
+        else if (Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            binding.signinTextinputlayoutEmail.error = "Please enter a valid email address"
+            return false
+        } else {
+            binding.signinTextinputlayoutEmail.error = null
+            return true
+        }
+    }
+
+    private fun validatePassword(password: String): Boolean{
+        if (password.isEmpty()){
+            binding.signinTextinputlayoutPassword.error = "Password Field can't be empty"
+            return false
+        } else if (password.length < 6){
+            binding.signinTextinputlayoutPassword.error = "Password too short"
+            return false
+        } else {
+            binding.signinTextinputlayoutPassword.error = null
+            return true
+        }
+    }
+
+
 
 
 }

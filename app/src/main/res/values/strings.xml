@@ -15,17 +15,29 @@
     <string name="splash_screen_four_text">See your achievement and how to improve.</string>
     <string name="image_description">image</string>
 
-
-
-
-
-
-
-
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Authentication -->
     <string name="splash_onboarding_continue_btn_text">Continue</string>
+    <string name="login_page_title_text">LogIn</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="sign_up_page_title">Create Account</string>
+    <string name="sign_up_already_have_an_account_text">Already have an account?</string>
+    <string name="sign_in_here_request">Sign in here</string>
+    <string name="username_hint">Username</string>
+    <string name="term_and_condition_text"><![CDATA[T&C]]></string>
+    <string name="sign_up_text">Sign Up</string>
+
+    <!-- Landing strings -->
+    <string name="tv_achievement_title">Achievement</string>
+    <string name="tv_welcome_text">Welcome</string>
+    <string name="sub_welcome_text">Good Afternoon</string>
+    <string name="tv_add_client_title">Add Client</string>
+    <string name="tv_elicitation_title">Elicitation</string>
+    <string name="tv_facility_title">Facility</string>
+    <string name="tv_search_title">Search</string>
+    <string name="tv_notification_icon_tittle">Notification</string>
+    <string name="image_icon_description">icon image description</string>
+    <string name="please_wait">Please wait...</string>
 
 </resources>

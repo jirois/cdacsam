@@ -1,9 +1,12 @@
 package com.jinncyapps.authenapp.utils
 
 import android.text.Editable
+import android.text.TextUtils
 import android.text.TextWatcher
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import java.util.regex.Pattern
 
 fun textWatcher(name: EditText?, emailText: EditText, passwordText: EditText, btn: Button): TextWatcher{
     val authTextWatcher: TextWatcher = object: TextWatcher {
@@ -22,3 +25,4 @@ fun textWatcher(name: EditText?, emailText: EditText, passwordText: EditText, bt
     }
     return authTextWatcher
 }
+
