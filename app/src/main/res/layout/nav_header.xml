@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/nav_header_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Joe Doe"
+                android:textSize="@dimen/text_xl"
+                android:textColor="@color/white"
+                android:textStyle="bold|normal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Case manager"
+                android:textSize="@dimen/text_xs"
+                android:textColor="@color/white"
+                android:textStyle="bold|normal"
+                />
+        </LinearLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:background="@color/purple_700"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/nav_style"
+            app:srcCompat="@drawable/ic_image_holder"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/grey"
+            android:padding="6dp"
+
+
+
+            />
+    </LinearLayout>
+
+</LinearLayout>
