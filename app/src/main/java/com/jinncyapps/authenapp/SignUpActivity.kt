@@ -47,6 +47,7 @@ class SignUpActivity : AppCompatActivity() {
             registerUser()
 
         }
+
     }
 
 

@@ -76,6 +76,7 @@ class SignInActivity : AppCompatActivity() {
                         ).show()
 
                         startActivity(Intent(this@SignInActivity, LandingActivity::class.java))
+                        finish()
                     } else {
                         Toast.makeText(
                             this@SignInActivity,
