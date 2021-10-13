@@ -32,6 +32,7 @@
         <TextView
             android:id="@+id/tv_welcome_name"
             android:layout_width="wrap_content"
+            android:text="Joe,"
             android:layout_height="match_parent"
             android:fontFamily="@font/open_sans_bold"
             android:textColor="@color/teal_200"

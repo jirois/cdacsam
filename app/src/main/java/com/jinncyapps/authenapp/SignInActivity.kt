@@ -36,10 +36,17 @@ class SignInActivity : AppCompatActivity() {
 
 
         binding.etLoginEmail.doOnTextChanged { text, start, before, count ->
-            if (text!!.length > 10){
-                binding.loginTextinputlayoutEmail.error= "No more"
-            } else if (text.length < 10) {
+            if (text!!.length <= 6){
+                binding.loginTextinputlayoutEmail.error= "Too few words"
+            } else if (text.length  > 7) {
                 binding.loginTextinputlayoutEmail.error= null
+            }
+        }
+        binding.etLoginPassword.doOnTextChanged { text, start, before, count ->
+            if (text!!.length <= 6){
+                binding.loginTextinputlayoutPassword.error= "Password must be more than 6 letters"
+            } else if (text.length > 6) {
+                binding.loginTextinputlayoutPassword.error= null
             }
         }
 
@@ -58,7 +65,6 @@ class SignInActivity : AppCompatActivity() {
         val emailtext: String = binding.etLoginEmail.text.toString()
         val passwordtext: String = binding.etLoginPassword.text.toString()
 
-        if (!validateEmail(emailtext) && !validatePassword(passwordtext)){
             FirebaseAuth.getInstance().signInWithEmailAndPassword(emailtext, passwordtext)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
@@ -69,7 +75,7 @@ class SignInActivity : AppCompatActivity() {
                             Toast.LENGTH_LONG
                         ).show()
 
-                        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+                        startActivity(Intent(this@SignInActivity, LandingActivity::class.java))
                     } else {
                         Toast.makeText(
                             this@SignInActivity,
@@ -79,7 +85,7 @@ class SignInActivity : AppCompatActivity() {
                     }
                 }
 
-        }
+
 
 
     }
@@ -89,10 +95,8 @@ class SignInActivity : AppCompatActivity() {
         if (emailInput.isEmpty()){
             binding.loginTextinputlayoutEmail.error = "Email Field can't be empty"
             return false
-        } else if (Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()){
-            binding.loginTextinputlayoutEmail.error = "Please enter a valid email address"
-            return false
-        } else {
+        }
+         else {
             binding.loginTextinputlayoutEmail.error = null
             return true
         }
@@ -117,7 +121,7 @@ class SignInActivity : AppCompatActivity() {
             val email: String = binding.etLoginEmail.text.toString().trim()
             val password: String = binding.etLoginPassword.text.toString().trim()
 
-            binding.btnSignin.isEnabled = email.isNotEmpty() && password.isNotEmpty()
+            binding.btnSignin.isEnabled = ( email.length > 6) && (password.length > 6)
         }
 
         override fun afterTextChanged(s: Editable?) {}

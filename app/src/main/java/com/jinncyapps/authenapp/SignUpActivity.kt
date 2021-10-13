@@ -64,61 +64,61 @@ class SignUpActivity : AppCompatActivity() {
                 }
 
         }
-        Toast.makeText(
-            this@SignUpActivity,
-            "email: $emailInput, password: $passwordInput",
-            Toast.LENGTH_SHORT
-        ).show()
+//        Toast.makeText(
+//            this@SignUpActivity,
+//            "email: $emailInput, password: $passwordInput",
+//            Toast.LENGTH_SHORT
+//        ).show()
 
 
-//        FirebaseAuth.getInstance().createUserWithEmailAndPassword(emailInput, passwordInput)
-//            .addOnCompleteListener(
-//                OnCompleteListener<AuthResult> { task ->
-//
-//                    // Hide the progress dialog
-//
-////                    hideProgressDialog()
-//                    // If the registration is successfully done
-//                    if (task.isSuccessful) {
-//
-//                        // Firebase registered user
-//                        val firebaseUser: FirebaseUser = task.result!!.user!!
-//                        // Registered Email
-//                        val registeredEmail = firebaseUser.email!!
-//
-//                        Toast.makeText(
-//                            this@SignUpActivity,
-//                            "you have successfully registered with email id $registeredEmail.",
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-//
-//                        /**
-//                         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
-//                         * and send him to Intro Screen for Sign-In
-//                         */
-//
-//
-//                        /**
-//                         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
-//                         * and send him to Intro Screen for Sign-In
-//                         */
-//                        startActivity(
-//                            Intent(
-//                                this@SignUpActivity,
-//                                SignInActivity::class.java
-//                            )
-//                        )
-//                        // Finish the Sign-Up Screen
-////                            finish()
-//                    } else {
-//                        Toast.makeText(
-//                            this@SignUpActivity,
-//                            task.exception!!.message,
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-//                    }
-//                })
-//
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(emailInput, passwordInput)
+            .addOnCompleteListener(
+                OnCompleteListener<AuthResult> { task ->
+
+                    // Hide the progress dialog
+
+//                    hideProgressDialog()
+                    // If the registration is successfully done
+                    if (task.isSuccessful) {
+
+                        // Firebase registered user
+                        val firebaseUser: FirebaseUser = task.result!!.user!!
+                        // Registered Email
+                        val registeredEmail = firebaseUser.email!!
+
+                        Toast.makeText(
+                            this@SignUpActivity,
+                            "you have successfully registered with email id $registeredEmail.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                        /**
+                         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
+                         * and send him to Intro Screen for Sign-In
+                         */
+
+
+                        /**
+                         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
+                         * and send him to Intro Screen for Sign-In
+                         */
+                        startActivity(
+                            Intent(
+                                this@SignUpActivity,
+                                SignInActivity::class.java
+                            )
+                        )
+                        // Finish the Sign-Up Screen
+//                            finish()
+                    } else {
+                        Toast.makeText(
+                            this@SignUpActivity,
+                            task.exception!!.message,
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                })
+
 
 
 
@@ -146,10 +146,7 @@ class SignUpActivity : AppCompatActivity() {
             binding.signinTextinputlayoutEmail.error = "Email too short"
             return false
         }
-        else if (Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            binding.signinTextinputlayoutEmail.error = "Please enter a valid email address"
-            return false
-        } else {
+        else {
             binding.signinTextinputlayoutEmail.error = null
             return true
         }
