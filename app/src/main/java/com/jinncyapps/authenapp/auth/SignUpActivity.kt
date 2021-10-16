@@ -1,27 +1,21 @@
-package com.jinncyapps.authenapp
+package com.jinncyapps.authenapp.auth
 
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PatternMatcher
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Patterns
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.jinncyapps.authenapp.BaseActivity
+import com.jinncyapps.authenapp.R
 import com.jinncyapps.authenapp.databinding.ActivitySignUpBinding
-import java.util.regex.Pattern
-import kotlin.system.measureTimeMillis
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpActivity : BaseActivity() {
     private lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,20 +59,15 @@ class SignUpActivity : AppCompatActivity() {
                 }
 
         }
-//        Toast.makeText(
-//            this@SignUpActivity,
-//            "email: $emailInput, password: $passwordInput",
-//            Toast.LENGTH_SHORT
-//        ).show()
 
-
+        showProgressDialog(resources.getString(R.string.please_wait))
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(emailInput, passwordInput)
             .addOnCompleteListener(
                 OnCompleteListener<AuthResult> { task ->
 
                     // Hide the progress dialog
 
-//                    hideProgressDialog()
+                    hideProgressDialog()
                     // If the registration is successfully done
                     if (task.isSuccessful) {
 

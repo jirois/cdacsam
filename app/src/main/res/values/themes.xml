@@ -17,6 +17,10 @@
     <style name="Theme.AuthenApp.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-<!--        <item name="android:windowFullscreen">false</item>-->
+        <!--        <item name="android:windowFullscreen">false</item>-->
     </style>
+
+    <style name="Theme.AuthenApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AuthenApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

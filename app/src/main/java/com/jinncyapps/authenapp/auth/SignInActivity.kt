@@ -1,4 +1,4 @@
-package com.jinncyapps.authenapp
+package com.jinncyapps.authenapp.auth
 
 import android.content.Intent
 import android.os.Build
@@ -6,18 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Patterns
-import android.view.WindowInsets
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.FirebaseAuth
+import com.jinncyapps.authenapp.BaseActivity
+import com.jinncyapps.authenapp.LandingActivity
+import com.jinncyapps.authenapp.R
 import com.jinncyapps.authenapp.databinding.ActivitySignInBinding
 
-class SignInActivity : AppCompatActivity() {
+class SignInActivity : BaseActivity() {
     private lateinit var binding: ActivitySignInBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
 
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_sign_in)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_in)
 
         binding.etLoginEmail.addTextChangedListener(authTextWatcher)
         binding.etLoginPassword.addTextChangedListener(authTextWatcher)
@@ -55,7 +55,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         binding.tvSignUpBtnText.setOnClickListener {
-            startActivity(Intent(this, SignUpActivity::class.java))
+            startActivity(Intent(this@SignInActivity, SignUpActivity::class.java))
         }
     }
 
@@ -65,8 +65,13 @@ class SignInActivity : AppCompatActivity() {
         val emailtext: String = binding.etLoginEmail.text.toString()
         val passwordtext: String = binding.etLoginPassword.text.toString()
 
+            showProgressDialog(resources.getString(R.string.please_wait))
             FirebaseAuth.getInstance().signInWithEmailAndPassword(emailtext, passwordtext)
                 .addOnCompleteListener { task ->
+
+                    //Hide progressbar
+                    hideProgressDialog()
+
                     if (task.isSuccessful) {
 
                         Toast.makeText(
@@ -80,7 +85,7 @@ class SignInActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(
                             this@SignInActivity,
-                            task.exception!!.message,
+                            "Email/Password not correct",
                             Toast.LENGTH_LONG
                         ).show()
                     }

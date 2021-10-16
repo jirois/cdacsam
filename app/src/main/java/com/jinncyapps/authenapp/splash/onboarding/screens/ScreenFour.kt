@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.jinncyapps.authenapp.R
-import com.jinncyapps.authenapp.SignInActivity
+import com.jinncyapps.authenapp.auth.SignInActivity
 import com.jinncyapps.authenapp.databinding.FragmentScreenFourBinding
 
 
