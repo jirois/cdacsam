@@ -82,6 +82,7 @@ class SignInActivity : BaseActivity() {
 
                         startActivity(Intent(this@SignInActivity, LandingActivity::class.java))
                         finish()
+                        return@addOnCompleteListener
                     } else {
                         Toast.makeText(
                             this@SignInActivity,
