@@ -50,10 +50,9 @@
         >
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/tv_greeting"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/sub_welcome_text"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_18dp"
             android:layout_marginEnd="@dimen/space_5dp"

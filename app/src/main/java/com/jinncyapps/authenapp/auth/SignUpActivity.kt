@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseUser
 import com.jinncyapps.authenapp.BaseActivity
 import com.jinncyapps.authenapp.R
 import com.jinncyapps.authenapp.databinding.ActivitySignUpBinding
+import com.jinncyapps.authenapp.firebase.FirestoreClass
+import com.jinncyapps.authenapp.model.User
 
 class SignUpActivity : BaseActivity() {
     private lateinit var binding: ActivitySignUpBinding
@@ -76,30 +78,14 @@ class SignUpActivity : BaseActivity() {
                         // Registered Email
                         val registeredEmail = firebaseUser.email!!
 
-                        Toast.makeText(
-                            this@SignUpActivity,
-                            "you have successfully registered with email id $registeredEmail.",
-                            Toast.LENGTH_SHORT
-                        ).show()
-
-                        /**
-                         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
-                         * and send him to Intro Screen for Sign-In
-                         */
-
-
-                        /**
-                         * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
-                         * and send him to Intro Screen for Sign-In
-                         */
-                        startActivity(
-                            Intent(
-                                this@SignUpActivity,
-                                SignInActivity::class.java
-                            )
+                        val user = User(
+                            firebaseUser.uid,
+                            usernameInput,
+                            registeredEmail
                         )
-                        // Finish the Sign-Up Screen
-//                            finish()
+
+                        FirestoreClass().registerUser(this@SignUpActivity, user)
+
                     } else {
                         Toast.makeText(
                             this@SignUpActivity,
@@ -109,11 +95,28 @@ class SignUpActivity : BaseActivity() {
                     }
                 })
 
-
-
-
 }
 
+
+    fun userRegisterSuccess() {
+        Toast.makeText(
+            this@SignUpActivity,
+            "You have successfully registered.",
+            Toast.LENGTH_SHORT
+        ).show()
+
+        // Hide the progress dialog
+        hideProgressDialog()
+
+        startActivity(
+            Intent(
+                this@SignUpActivity,
+                SignInActivity::class.java
+            )
+        )
+        finish()
+        return
+    }
 
     private fun validateName(name: String): Boolean{
         if (name.isEmpty()){

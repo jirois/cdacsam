@@ -27,6 +27,10 @@
                 android:id="@+id/policy"
                 android:title="@string/menu_policy_title"
                 android:icon="@drawable/ic_policy" />
+            <item
+                android:id="@+id/signOut"
+                android:title="@string/sign_out_text"
+                android:icon="@drawable/ic_sign_out" />
         </menu>
     </item>
 

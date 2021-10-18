@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:background="@drawable/nav_header_background">
     <LinearLayout
@@ -18,20 +19,22 @@
             android:orientation="vertical"
             android:layout_margin="16dp">
             <TextView
+                android:id="@+id/nav_view_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Joe Doe"
                 android:textSize="@dimen/text_xl"
                 android:textColor="@color/white"
                 android:textStyle="bold|normal"
+                tool:text="Joe Doe"
                 />
             <TextView
+                android:id="@+id/job_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Case manager"
                 android:textSize="@dimen/text_xs"
                 android:textColor="@color/white"
                 android:textStyle="bold|normal"
+                tool:text="Case Manager"
                 />
         </LinearLayout>
         <com.google.android.material.imageview.ShapeableImageView
@@ -45,7 +48,6 @@
             app:strokeWidth="2dp"
             app:strokeColor="@color/grey"
             android:padding="6dp"
-
 
 
             />

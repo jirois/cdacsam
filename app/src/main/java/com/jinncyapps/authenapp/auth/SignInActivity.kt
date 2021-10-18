@@ -16,6 +16,7 @@ import com.jinncyapps.authenapp.BaseActivity
 import com.jinncyapps.authenapp.LandingActivity
 import com.jinncyapps.authenapp.R
 import com.jinncyapps.authenapp.databinding.ActivitySignInBinding
+import com.jinncyapps.authenapp.firebase.FirestoreClass
 
 class SignInActivity : BaseActivity() {
     private lateinit var binding: ActivitySignInBinding
@@ -74,15 +75,8 @@ class SignInActivity : BaseActivity() {
 
                     if (task.isSuccessful) {
 
-                        Toast.makeText(
-                            this@SignInActivity,
-                            "You have successfully signed in.",
-                            Toast.LENGTH_LONG
-                        ).show()
+                        FirestoreClass().signInUser(this@SignInActivity)
 
-                        startActivity(Intent(this@SignInActivity, LandingActivity::class.java))
-                        finish()
-                        return@addOnCompleteListener
                     } else {
                         Toast.makeText(
                             this@SignInActivity,
@@ -94,6 +88,20 @@ class SignInActivity : BaseActivity() {
 
 
 
+
+    }
+
+    fun signinUserSuccess(){
+
+        Toast.makeText(
+            this@SignInActivity,
+            "You have successfully signed in.",
+            Toast.LENGTH_LONG
+        ).show()
+
+        startActivity(Intent(this@SignInActivity, LandingActivity::class.java))
+        finish()
+        return
 
     }
 

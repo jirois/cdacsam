@@ -23,19 +23,30 @@
              landing page body content
             <include layout="@layout/landing_body" />
 
-<!--            <androidx.fragment.app.FragmentContainerView-->
-<!--                android:id="@+id/fragment"-->
-<!--                android:name="androidx.navigation.fragment.NavHostFragment"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                app:defaultNavHost="true"-->
-<!--                app:navGraph="@navigation/nav_drawer_graph"-->
-<!--                tools:layout="@layout/fragment_home" />-->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/nav_drawer_graph"
+                tools:layout="@layout/fragment_home" />
 
 
         </LinearLayout>
 
-        <include layout="@layout/nav_drawer" />
+        <com.google.android.material.navigation.NavigationView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_drawer"
+            android:layout_gravity="start"
+            app:menu="@menu/nav_items"
+            app:headerLayout="@layout/nav_header"
+            >
+
+        </com.google.android.material.navigation.NavigationView>
 
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

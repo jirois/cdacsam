@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.os.Handler
 import android.view.WindowInsets
+import com.jinncyapps.authenapp.LandingActivity
 import com.jinncyapps.authenapp.R
+import com.jinncyapps.authenapp.firebase.FirestoreClass
 
 
 class SplashActivity : AppCompatActivity() {
@@ -33,7 +35,13 @@ class SplashActivity : AppCompatActivity() {
         }
 
         Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, IntroActivity::class.java))
+            val currentID = FirestoreClass().getCurrentID()
+            if (currentID.isNotEmpty()) {
+                startActivity(Intent(this@SplashActivity, LandingActivity::class.java))
+
+            } else{
+                startActivity(Intent(this@SplashActivity, IntroActivity::class.java))
+            }
             finish()
         }, 2500)
     }
