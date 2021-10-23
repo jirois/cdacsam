@@ -11,4 +11,10 @@
     <style name="nav_style">
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="activity_header_text_style">
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
 </resources>

@@ -59,5 +59,7 @@
     <dimen name="progress_text_size">16sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
+    <dimen name="activity_toolbar_textsize">18sp</dimen>
+
 
 </resources>

@@ -9,24 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AuthenApp">
-        <activity android:name=".activities.AddClientActivity"></activity>
-        <activity android:name=".activities.FacilityActivity"
-            android:theme="@style/Theme.AuthenApp.NoActionBar"
-            ></activity>
-        <activity android:name=".activities.AchievementActivity"
-            android:theme="@style/Theme.AuthenApp.NoActionBar"
-            >
-        </activity>
-        <activity android:name=".activities.NotificationActivity"
+        <activity android:name=".activities.AddClientActivity"
             android:theme="@style/Theme.AuthenApp.NoActionBar"
             >
 
         </activity>
-        <activity android:name=".activities.ElicitationActivity"
-            android:theme="@style/Theme.AuthenApp.NoActionBar"
-            >
-
-        </activity>
+        <activity
+            android:name=".activities.FacilityActivity"
+            android:theme="@style/Theme.AuthenApp.NoActionBar" />
+        <activity
+            android:name=".activities.AchievementActivity"
+            android:theme="@style/Theme.AuthenApp.NoActionBar"></activity>
+        <activity
+            android:name=".activities.NotificationActivity"
+            android:theme="@style/Theme.AuthenApp.NoActionBar"></activity>
+        <activity
+            android:name=".activities.ElicitationActivity"
+            android:theme="@style/Theme.AuthenApp.NoActionBar"></activity>
         <activity
             android:name=".LandingActivity"
             android:theme="@style/Theme.AuthenApp.NoActionBar" />
