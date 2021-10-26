@@ -10,7 +10,8 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.FacilityActivity">
+        android:orientation="vertical"
+        tools:context=".activities.facility.FacilityActivity">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_facility_activity"
@@ -28,6 +29,49 @@
                 android:layout_marginEnd="20dp"
                 android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="List Of Facilities"
+                android:layout_weight="1"
+                style="@style/activity_header_text_style" />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_search"
+                    android:layout_gravity="end"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find supported facility closet to you"
+                android:textSize="@dimen/text_xs"
+                />
+
+
+        </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/facility_nav_graph" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

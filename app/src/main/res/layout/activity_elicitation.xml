@@ -10,7 +10,8 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.ElicitationActivity">
+        android:orientation="vertical"
+        tools:context=".activities.elicitation.ElicitationActivity">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_elicition_activity"
@@ -28,6 +29,35 @@
                 android:layout_marginEnd="20dp"
                 android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Partners Details"
+                style="@style/activity_header_text_style" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See details of elicited partners and their promity to your current location"
+                android:textSize="@dimen/text_xs"
+                />
+
+
+        </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/elicit_graph" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

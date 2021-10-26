@@ -52,7 +52,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Enter client's detail and that of elicitated partner"
-                    android:textSize="@dimen/text_sm"
+                    android:textSize="@dimen/text_xs"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="#c0c0c0"
                     />
 
 
@@ -77,7 +83,7 @@
                             android:textSize="@dimen/text_sm"
                             android:textColor="@color/main_text_color"/>
                         <EditText
-                            android:id="@+id/et_last_name"
+                            android:id="@+id/et_client_name"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/sign_up_edit_text_height_size"
                             android:ems="10"
@@ -183,7 +189,8 @@
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space_16dp"
+                    android:layout_marginTop="@dimen/space_24dp"
+                    android:layout_marginBottom="@dimen/space_24dp"
                     android:orientation="vertical"
                     >
                     <TextView
@@ -195,17 +202,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="This area allows you to enter info of client elicitated by this client"
-                        android:textSize="@dimen/text_sm"
+                        android:textSize="@dimen/text_xs"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#c0c0c0"
                         />
                 </androidx.appcompat.widget.LinearLayoutCompat>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-
                     android:orientation="vertical"
                     >
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -228,7 +238,7 @@
                             android:ems="10"
                             android:inputType="text"
                             android:layout_marginTop="@dimen/space_5dp"
-                            android:hint="@string/username_hint"
+                            android:hint="Enter Name"
                             android:paddingStart="12dp"
                             android:paddingEnd="12dp"
                             android:drawablePadding="5dp"
@@ -296,9 +306,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="@dimen/space_24dp"
                         android:text="Location Info (Map Cordinates)"
+                        android:layout_marginBottom="@dimen/space_24dp"
                         android:textColor="@color/main_text_color"
                         android:textSize="20sp"
                         android:fontFamily="@font/open_sans_bold"
@@ -321,7 +331,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/sign_up_edit_text_height_size"
                             android:ems="10"
-                            android:inputType="number"
+                            android:inputType="numberDecimal"
                             android:layout_marginTop="5dp"
                             android:hint="Eg - 30.909889"
                             android:paddingStart="12dp"
@@ -349,7 +359,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/sign_up_edit_text_height_size"
                             android:ems="10"
-                            android:inputType="number"
+                            android:inputType="numberDecimal"
                             android:layout_marginTop="5dp"
                             android:hint="Eg -70.883394"
                             android:paddingStart="12dp"
@@ -359,11 +369,108 @@
                             />
 
                     </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_24dp"
+                        android:layout_marginBottom="@dimen/space_24dp"
+                        android:text="Facilities Info"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/open_sans_bold"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Facility"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginEnd="@dimen/space_24dp"
+                            android:textSize="@dimen/text_sm"
+                            android:textColor="@color/main_text_color"/>
+                        <EditText
+                            android:id="@+id/et_facility_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/sign_up_edit_text_height_size"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:layout_marginTop="5dp"
+                            android:hint="Eg - Akampka"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:drawablePadding="5dp"
+                            android:background="@drawable/custom_input"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Facilty Address"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginEnd="@dimen/space_24dp"
+                            android:textSize="@dimen/text_sm"
+                            android:layout_marginTop="@dimen/space_16dp"
+                            android:textColor="@color/main_text_color"/>
+                        <EditText
+                            android:id="@+id/et_facility_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/sign_up_edit_text_height_size"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:layout_marginTop="5dp"
+                            android:hint="Eg - Akampka highway"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:drawablePadding="5dp"
+                            android:background="@drawable/custom_input"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cam Team"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginEnd="@dimen/space_24dp"
+                            android:textSize="@dimen/text_sm"
+                            android:layout_marginTop="@dimen/space_16dp"
+                            android:textColor="@color/main_text_color"/>
+                        <EditText
+                            android:id="@+id/et_cam_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/sign_up_edit_text_height_size"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:layout_marginTop="5dp"
+                            android:hint="Eg - Akampka cam1"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:drawablePadding="5dp"
+                            android:background="@drawable/custom_input"
+                            />
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btn_signin"
+                    android:id="@+id/btn_save"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -376,7 +483,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="@dimen/button_text_size"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="30dp"
                     />
 
 

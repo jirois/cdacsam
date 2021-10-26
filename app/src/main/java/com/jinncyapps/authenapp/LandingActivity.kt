@@ -1,8 +1,8 @@
 package com.jinncyapps.authenapp
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.WindowManager
@@ -12,20 +12,15 @@ import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.NavController
-import androidx.navigation.NavDestination
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.jinncyapps.authenapp.activities.*
+import com.jinncyapps.authenapp.activities.elicitation.ElicitationActivity
+import com.jinncyapps.authenapp.activities.facility.FacilityActivity
 import com.jinncyapps.authenapp.auth.SignInActivity
 import com.jinncyapps.authenapp.databinding.ActivityLandingBinding
-import com.jinncyapps.authenapp.databinding.NavHeaderBinding
 import com.jinncyapps.authenapp.firebase.FirestoreClass
 import com.jinncyapps.authenapp.model.User
-import com.jinncyapps.authenapp.utils.capitalizeString
 import com.jinncyapps.authenapp.utils.getGreetingMessage
 import java.util.*
 
@@ -118,12 +113,21 @@ class LandingActivity : BaseActivity(),NavigationView.OnNavigationItemSelectedLi
             }
 
             R.id.signOut -> {
+                val builder = AlertDialog.Builder(this)
+                builder.setPositiveButton("Yes"){_, _ ->
+                    FirebaseAuth.getInstance().signOut()
+                    val intent = Intent(this, SignInActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
+                    finish()
 
-                FirebaseAuth.getInstance().signOut()
-                val intent = Intent(this, SignInActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
-                finish()
+                }
+                builder.setNegativeButton("No"){_, _ ->}
+                builder.setTitle("Sign Out")
+                builder.setMessage("Are you sure you want to sign out?")
+                builder.create().show()
+
+
             }
         }
         drawerLayout.closeDrawer(GravityCompat.START)

@@ -15,7 +15,7 @@
 
         </activity>
         <activity
-            android:name=".activities.FacilityActivity"
+            android:name=".activities.facility.FacilityActivity"
             android:theme="@style/Theme.AuthenApp.NoActionBar" />
         <activity
             android:name=".activities.AchievementActivity"
@@ -24,7 +24,7 @@
             android:name=".activities.NotificationActivity"
             android:theme="@style/Theme.AuthenApp.NoActionBar"></activity>
         <activity
-            android:name=".activities.ElicitationActivity"
+            android:name=".activities.elicitation.ElicitationActivity"
             android:theme="@style/Theme.AuthenApp.NoActionBar"></activity>
         <activity
             android:name=".LandingActivity"
