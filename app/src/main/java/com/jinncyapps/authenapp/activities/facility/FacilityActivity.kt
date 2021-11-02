@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import com.jinncyapps.authenapp.R
 import com.jinncyapps.authenapp.databinding.ActivityFacilityBinding
 
@@ -20,9 +23,18 @@ class FacilityActivity : AppCompatActivity() {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             window.statusBarColor = this.resources.getColor(R.color.purple_700)
         }
+//
+//        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFacilityFragment) as NavHostFragment
+//        val navController = navHostFragment.navController
+//        NavigationUI.setupActionBarWithNavController(this,navController)
 
         setupActionBar()
     }
+
+//    override fun onSupportNavigateUp(): Boolean {
+//        val navController = this.findNavController(R.id.navHostFacilityFragment)
+//        return navController.navigateUp()
+//    }
 
     private fun setupActionBar() {
 

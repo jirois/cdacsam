@@ -22,6 +22,7 @@ import com.jinncyapps.authenapp.databinding.ActivityLandingBinding
 import com.jinncyapps.authenapp.firebase.FirestoreClass
 import com.jinncyapps.authenapp.model.User
 import com.jinncyapps.authenapp.utils.getGreetingMessage
+import com.jinncyapps.authenapp.utils.getGreetingMessages
 import java.util.*
 
 class LandingActivity : BaseActivity(),NavigationView.OnNavigationItemSelectedListener {
@@ -59,7 +60,8 @@ class LandingActivity : BaseActivity(),NavigationView.OnNavigationItemSelectedLi
         navView.setNavigationItemSelectedListener(this)
 
         val greetingText = findViewById<TextView>(R.id.tv_greeting)
-        greetingText.text = getGreetingMessage()
+        val greetingIcon = findViewById<ImageView>(R.id.img_icon)
+        getGreetingMessages(greetingText, greetingIcon)
 
 
 
@@ -133,4 +135,15 @@ class LandingActivity : BaseActivity(),NavigationView.OnNavigationItemSelectedLi
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
+
+
+    override fun onBackPressed() {
+        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            // A double back press function is added in Base Activity.
+            doubleBackToExit()
+        }
+    }
+
 }

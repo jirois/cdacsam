@@ -37,4 +37,6 @@ class ClientAdapter: RecyclerView.Adapter<ClientAdapter.ClientViewHolder>() {
         this.clientList = client
         notifyDataSetChanged()
     }
+
+
 }

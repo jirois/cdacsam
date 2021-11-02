@@ -1,10 +1,9 @@
 package com.jinncyapps.authenapp.activities.facility.fragment
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -38,7 +37,28 @@ class FacilityFragment : Fragment() {
             adapter.setData(client)
         })
 
+//        setHasOptionsMenu(true)
+
         return binding.root
     }
+
+//    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater): Boolean {
+//        inflater.inflate(R.menu.search_menu, menu)
+//
+//        val search = menu?.findItem(R.id.menu_search)
+//        val searchView = search?.actionView as? SearchView
+//        searchView?.isSubmitButtonEnabled = true
+//        searchView?.setOnQueryTextListener(this)
+//
+//        return true
+//    }
+//
+//    override fun onQueryTextSubmit(query: String?): Boolean {
+//        TODO("Not yet implemented")
+//    }
+//
+//    override fun onQueryTextChange(newText: String?): Boolean {
+//        TODO("Not yet implemented")
+//    }
 
 }

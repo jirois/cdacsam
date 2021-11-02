@@ -9,4 +9,8 @@ class Repository(private val clientDao: ClientDao) {
     suspend fun addClient(client: Client){
         clientDao.addClient(client)
     }
+
+    suspend fun deleClient(client: Client){
+        clientDao.deleteFacility(client)
+    }
 }

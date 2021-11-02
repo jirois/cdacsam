@@ -10,6 +10,9 @@ interface ClientDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addClient(client: Client)
 
+    @Delete
+    suspend fun deleteFacility(client: Client)
+
     @Query("SELECT * FROM client_table ORDER BY id DESC")
     fun readAllClient():LiveData<List<Client>>
 }

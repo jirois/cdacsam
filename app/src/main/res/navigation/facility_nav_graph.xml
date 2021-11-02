@@ -8,5 +8,22 @@
         android:id="@+id/facilityFragment"
         android:name="com.jinncyapps.authenapp.activities.facility.fragment.FacilityFragment"
         android:label="fragment_facility"
-        tools:layout="@layout/fragment_facility" />
+        tools:layout="@layout/fragment_facility" >
+        <action
+            android:id="@+id/action_facilityFragment_to_facilityDetailFragment"
+            app:destination="@id/facilityDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/facilityDetailFragment"
+        android:name="com.jinncyapps.authenapp.activities.facility.fragment.FacilityDetailFragment"
+        android:label="fragment_facility_detail"
+        tools:layout="@layout/fragment_facility_detail" >
+        <action
+            android:id="@+id/action_facilityDetailFragment_to_facilityFragment"
+            app:destination="@id/facilityFragment" />
+        <argument
+            android:name="currentClient"
+            app:argType="com.jinncyapps.authenapp.data.Client" />
+    </fragment>
 </navigation>

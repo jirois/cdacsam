@@ -7,6 +7,9 @@ import android.util.Log
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
+import com.jinncyapps.authenapp.R
 import java.util.*
 import java.util.regex.Pattern
 
@@ -52,6 +55,31 @@ fun getGreetingMessage():String{
         in 12..15 -> "Good Afternoon"
         in 16..20 -> "Good Evening"
         in 21..23 -> "Good Night"
+        else -> "Hello"
+    }
+}
+
+fun getGreetingMessages(text: TextView, imageView: ImageView){
+    val c = Calendar.getInstance()
+    val timeOfDay = c.get(Calendar.HOUR_OF_DAY)
+
+    when (timeOfDay) {
+        in 0..11 -> {
+            text.text= "Good Morning"
+            imageView.setImageResource(R.drawable.ic_morning)
+        }
+        in 12..15 -> {
+            text.setText("Good Afternoon")
+            imageView.setImageResource(R.drawable.ic_afternoon)
+        }
+        in 16..20 ->{
+            text.setText( "Good Evening")
+            imageView.setImageResource(R.drawable.ic_night_sm)
+        }
+        in 21..23 ->{
+            text.setText( "Good Night")
+            imageView.setImageResource(R.drawable.ic_night_sm)
+        }
         else -> "Hello"
     }
 }

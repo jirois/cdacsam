@@ -23,4 +23,10 @@ class ClientViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    fun deletClient(client: Client){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleClient(client)
+        }
+    }
+
 }
