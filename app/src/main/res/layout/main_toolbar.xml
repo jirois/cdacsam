@@ -11,9 +11,9 @@
     >
     <ImageView
         android:id="@+id/iv_drawer_menu"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        app:srcCompat="@drawable/ic_menu_24" />
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:srcCompat="@drawable/ic_menu_21" />
     <TextView
         android:id="@+id/main_toolbar_title"
         android:layout_width="wrap_content"
