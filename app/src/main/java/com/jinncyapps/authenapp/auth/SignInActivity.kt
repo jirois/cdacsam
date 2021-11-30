@@ -2,13 +2,11 @@ package com.jinncyapps.authenapp.auth
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.core.widget.doOnTextChanged
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.FirebaseAuth
@@ -75,7 +73,7 @@ class SignInActivity : BaseActivity() {
 
                     if (task.isSuccessful) {
 
-                        FirestoreClass().signInUser(this@SignInActivity)
+                        FirestoreClass().loadUserInfo(this@SignInActivity)
 
                     } else {
                         Toast.makeText(

@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
+import com.bumptech.glide.Glide
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.jinncyapps.authenapp.activities.*
@@ -21,7 +22,6 @@ import com.jinncyapps.authenapp.auth.SignInActivity
 import com.jinncyapps.authenapp.databinding.ActivityLandingBinding
 import com.jinncyapps.authenapp.firebase.FirestoreClass
 import com.jinncyapps.authenapp.model.User
-import com.jinncyapps.authenapp.utils.getGreetingMessage
 import com.jinncyapps.authenapp.utils.getGreetingMessages
 import java.util.*
 
@@ -46,7 +46,7 @@ class LandingActivity : BaseActivity(),NavigationView.OnNavigationItemSelectedLi
         }
 
 
-        FirestoreClass().signInUser(this@LandingActivity)
+        FirestoreClass().loadUserInfo(this@LandingActivity)
         drawerLayout = binding.drawerLayout
         val menuIcon = findViewById<ImageView>(R.id.iv_drawer_menu)
         val navView = findViewById<NavigationView>(R.id.nav_drawer)
@@ -94,6 +94,19 @@ class LandingActivity : BaseActivity(),NavigationView.OnNavigationItemSelectedLi
         val username = headerView.findViewById<TextView>(R.id.nav_view_username)
         username.text = user.name
 
+
+        // The instance of the user image of the navigation view.
+        val navUserImage = headerView.findViewById<ImageView>(R.id.iv_user_image)
+
+        // Load the user image in the ImageView.
+        Glide
+            .with(this@LandingActivity)
+            .load(user.image) // URL of the image
+            .centerCrop() // Scale type of the image.
+            .placeholder(R.drawable.ic_image_holder) // A default place holder
+            .into(navUserImage) // the view in which the image will be loaded.
+
+
         val welcomeUsername = findViewById<TextView>(R.id.tv_welcome_name)
         welcomeUsername.text = user.name
         welcomeUsername.toString()
@@ -103,6 +116,7 @@ class LandingActivity : BaseActivity(),NavigationView.OnNavigationItemSelectedLi
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
             R.id.profile -> {
+                startActivity(Intent(this, ProfileActivity::class.java))
                 Toast.makeText(
                     this@LandingActivity,
                     "Profile",

@@ -9,5 +9,24 @@
         android:id="@+id/partnerListFragment"
         android:name="com.jinncyapps.authenapp.activities.elicitation.fragments.PartnerListFragment"
         android:label="fragment_partner_list"
-        tools:layout="@layout/fragment_partner_list" />
+        tools:layout="@layout/fragment_partner_list" >
+        <argument
+            android:name="currentClient"
+            app:argType="com.jinncyapps.authenapp.data.Client" />
+        <action
+            android:id="@+id/action_partnerListFragment_to_elicitClientDetails2"
+            app:destination="@id/elicitClientDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/elicitClientDetails"
+        android:name="com.jinncyapps.authenapp.activities.elicitation.fragments.ElicitClientDetails"
+        android:label="fragment_elicit_client_details"
+        tools:layout="@layout/fragment_elicit_client_details" >
+        <argument
+            android:name="currentClient"
+            app:argType="com.jinncyapps.authenapp.data.Client" />
+        <action
+            android:id="@+id/action_elicitClientDetails_to_partnerListFragment2"
+            app:destination="@id/partnerListFragment" />
+    </fragment>
 </navigation>

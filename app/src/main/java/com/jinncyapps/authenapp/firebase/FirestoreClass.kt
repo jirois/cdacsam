@@ -7,6 +7,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.ktx.Firebase
 import com.jinncyapps.authenapp.LandingActivity
+import com.jinncyapps.authenapp.activities.ProfileActivity
 import com.jinncyapps.authenapp.auth.SignInActivity
 import com.jinncyapps.authenapp.auth.SignUpActivity
 import com.jinncyapps.authenapp.model.User
@@ -31,7 +32,7 @@ class FirestoreClass {
                 )
             }
     }
-    fun signInUser(activity: Activity){
+    fun loadUserInfo(activity: Activity){
         mFirestore.collection(Constants.USERS)
             .document(getCurrentID())
             .get()
@@ -47,10 +48,22 @@ class FirestoreClass {
                     is LandingActivity -> {
                         activity.updateNavigationUserSuccess(loggedUser)
                     }
+                    is ProfileActivity -> {
+                        activity.userUI(loggedUser)
+                    }
+
                 }
                 
             }
             .addOnFailureListener {e ->
+                when (activity){
+                    is SignInActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                    is LandingActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                }
                 Log.e(
                     activity.javaClass.simpleName,
                     "Error while getting loggedIn user details",

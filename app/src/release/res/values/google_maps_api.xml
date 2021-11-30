@@ -10,11 +10,12 @@
     you will also need to set up a key for your release certificate.
 
     Follow the directions here:
+    SHA1: 96:68:0F:11:41:AE:55:48:E0:14:69:F1:66:DB:33:8E:D9:1D:FE:9E
 
     https://developers.google.com/maps/documentation/android/signup
 
     Once you have your key (it starts with "AIza"), replace the "google_maps_key"
     string in this file.
     -->
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">YOUR_KEY_HERE</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAjW1l7m_m_2mda3cUt-jo3y-PNw6ZeXXw</string>
 </resources>

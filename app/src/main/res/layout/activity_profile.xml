@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ProfileActivity">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_user_image"
+        android:layout_width="@dimen/nav_image_size"
+        android:layout_height="@dimen/nav_image_size"
+        android:layout_marginTop="45dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/nav_content_margin_StartEnd"
+        android:layout_marginEnd="@dimen/nav_content_margin_StartEnd"
+        android:contentDescription="@string/image_description"
+        app:srcCompat="@drawable/ic_image_holder"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="@dimen/nav_image_circular_border_width" />
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
