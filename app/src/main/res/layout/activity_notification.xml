@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="viewModel"
+            type="com.jinncyapps.authenapp.viewmodel.CdacsamViewModel" />
 
     </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".activities.NotificationActivity">
 
         <androidx.appcompat.widget.Toolbar
@@ -28,6 +32,25 @@
                 android:layout_marginEnd="20dp"
                 android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/activity_header_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.response}" />
+
+
+
+        </LinearLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

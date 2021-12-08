@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.jinncyapps.authenapp.R
 import com.jinncyapps.authenapp.databinding.ActivityNotificationBinding
+import com.jinncyapps.authenapp.viewmodel.CdacsamViewModel
 
 class NotificationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNotificationBinding
+    private val viewModel: CdacsamViewModel by lazy {
+        ViewModelProvider(this).get(CdacsamViewModel::class.java)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_notification)
@@ -20,6 +25,9 @@ class NotificationActivity : AppCompatActivity() {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             window.statusBarColor = this.resources.getColor(R.color.purple_700)
         }
+
+        binding.setLifecycleOwner(this)
+        binding.viewModel = viewModel
 
         setupActionBar()
 

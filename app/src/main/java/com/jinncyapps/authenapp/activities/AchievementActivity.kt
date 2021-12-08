@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.jinncyapps.authenapp.R
 import com.jinncyapps.authenapp.databinding.ActivityAchievementBinding
+import com.jinncyapps.authenapp.viewmodel.CdacsamViewModel
 
 class AchievementActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAchievementBinding
+    private val viewModel: CdacsamViewModel by lazy {
+        ViewModelProvider(this).get(CdacsamViewModel::class.java)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_achievement)
@@ -20,6 +25,9 @@ class AchievementActivity : AppCompatActivity() {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
             window.statusBarColor = this.resources.getColor(R.color.purple_700)
         }
+
+        binding.setLifecycleOwner(this)
+        binding.viewmodel = viewModel
 
         setupActionBar()
 
