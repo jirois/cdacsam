@@ -16,8 +16,12 @@ import com.jinncyapps.authenapp.databinding.FragmentPartnerListBinding
 
 
 class PartnerListFragment : Fragment() {
-    private lateinit var mClientViewModel: ClientViewModel
+//    private lateinit var mClientViewModel: ClientViewModel
     private lateinit var binding: FragmentPartnerListBinding
+    private val mClientNetworkViewModel:ClientNetworkViewModel by lazy {
+        ViewModelProvider(this).get(ClientNetworkViewModel::class.java)
+    }
+    private val mClientNetworkAdapter by lazy { ClientNetworkAdapter() }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,23 +29,19 @@ class PartnerListFragment : Fragment() {
         // Inflate the layout for this fragment
         binding =  DataBindingUtil.inflate(inflater, R.layout.fragment_partner_list, container, false)
 
-        mClientViewModel = ViewModelProvider(this).get(ClientViewModel::class.java)
+//        mClientViewModel = ViewModelProvider(this).get(ClientViewModel::class.java)
 
        //recyclerview
-        val adapter = ClientAdapter()
         val partnerRecyclerView = binding.rvPartnerRecyclerview
-        partnerRecyclerView.adapter = adapter
+        partnerRecyclerView.adapter = mClientNetworkAdapter
         partnerRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         //viewmodel
-        mClientViewModel.readAllClient.observe(viewLifecycleOwner, Observer { client ->
-            adapter.setData(client)
+        mClientNetworkViewModel.property.observe(viewLifecycleOwner, { client ->
+            mClientNetworkAdapter.setData(client)
         })
 
-
         return binding.root
-
-
 
     }
 
