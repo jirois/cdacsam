@@ -112,7 +112,7 @@ dependencies {
     implementation 'com.todkars:shimmer-recyclerview:0.4.1'
 
     //Esay Permission
-    implementation("com.vamadalin.easypermission:0.1.0")
+    implementation 'com.vmadalin:easypermissions-ktx:1.0.0'
 
 
 }
