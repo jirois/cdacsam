@@ -15,7 +15,7 @@ import com.jinncyapps.authenapp.data.ClientViewModel
 import com.jinncyapps.authenapp.databinding.FragmentPartnerListBinding
 
 
-class PartnerListFragment : Fragment() {
+open class PartnerListFragment : Fragment() {
 //    private lateinit var mClientViewModel: ClientViewModel
     private lateinit var binding: FragmentPartnerListBinding
     private val mClientNetworkViewModel:ClientNetworkViewModel by lazy {
@@ -29,20 +29,35 @@ class PartnerListFragment : Fragment() {
         // Inflate the layout for this fragment
         binding =  DataBindingUtil.inflate(inflater, R.layout.fragment_partner_list, container, false)
 
-//        mClientViewModel = ViewModelProvider(this).get(ClientViewModel::class.java)
 
-       //recyclerview
-        val partnerRecyclerView = binding.rvPartnerRecyclerview
-        partnerRecyclerView.adapter = mClientNetworkAdapter
-        partnerRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        binding.viewmodel = mClientNetworkViewModel
 
         //viewmodel
         mClientNetworkViewModel.property.observe(viewLifecycleOwner, { client ->
             mClientNetworkAdapter.setData(client)
         })
 
+        setUpRecyclerview()
+
+
+
         return binding.root
 
+    }
+
+
+    private fun setUpRecyclerview(){
+        binding.recycler.adapter = mClientNetworkAdapter
+        binding.recycler.layoutManager = LinearLayoutManager(requireContext())
+    }
+
+   open fun showShimmerEffect(){
+        binding.recycler.showShimmer()
+    }
+
+    open fun hideShimmerEffect(){
+        binding.recycler.hideShimmer()
     }
 
 

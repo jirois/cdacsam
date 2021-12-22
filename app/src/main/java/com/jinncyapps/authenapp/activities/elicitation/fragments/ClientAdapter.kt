@@ -24,9 +24,9 @@ class ClientAdapter: RecyclerView.Adapter<ClientAdapter.ClientViewHolder>() {
     override fun onBindViewHolder(holder: ClientViewHolder, position: Int) {
        val currentClient = clientList[position]
 
-        holder.itemView.findViewById<TextView>(R.id.tv_facility_name).text = currentClient.name
-        holder.itemView.findViewById<TextView>(R.id.tv_client_id_no).text = currentClient.clientId
-        holder.itemView.findViewById<TextView>(R.id.tv_facility_phone).text = currentClient.facility_name
+//        holder.itemView.findViewById<TextView>(R.id.tv_facility_name).text = currentClient.name
+//        holder.itemView.findViewById<TextView>(R.id.tv_client_id_no).text = currentClient.clientId
+//        holder.itemView.findViewById<TextView>(R.id.tv_facility_phone).text = currentClient.facility_name
 
         holder.itemView.findViewById<View>(R.id.elicit_list_detail).setOnClickListener {
             val action = PartnerListFragmentDirections.actionPartnerListFragmentToElicitClientDetails2(currentClient)

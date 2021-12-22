@@ -20,105 +20,106 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp">
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            >
 
 
             <TextView
-                android:id="@+id/tv_facility_name"
+                android:id="@+id/tv_name_client"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
                 android:fontFamily="@font/open_sans_bold"
-                android:textSize="@dimen/text_sm"
-                tools:text="Akpan Okon"
-                android:textColor="@color/main_text_color"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="Okon Julia"
+                android:textSize="@dimen/text_xl"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Client ID:"
+                android:textColor="@color/ic_text_color"
+                android:textSize="@dimen/text_sm"
+                app:layout_constraintStart_toStartOf="@+id/tv_name_client"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_client" />
+
+            <TextView
+                android:id="@+id/tv_clientid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@{client.clientId}"
+                android:textColor="@color/teal_200"
+                android:textSize="@dimen/text_sm"
+                app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                tools:text="0011" />
+
+            <TextView
+                android:id="@+id/tv_client_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="@{client.partnerState}"
+                android:textColor="@color/main_text_color"
+                android:textSize="@dimen/text_sm"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                tools:text="No 1 Odupkani" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="37dp"
+                android:text="10 mins"
+                android:textColor="@color/teal_200"
+                android:textSize="@dimen/text_sm"
+                app:layout_constraintEnd_toStartOf="@+id/tv_status"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_away"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Away"
+                android:textColor="@color/ic_text_color"
+                android:textSize="@dimen/text_sm"
+                app:layout_constraintEnd_toEndOf="@+id/tv_distance"
+                app:layout_constraintStart_toStartOf="@+id/tv_distance"
+                app:layout_constraintTop_toBottomOf="@+id/tv_distance" />
 
             <TextView
                 android:id="@+id/tv_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="4dp"
-                android:text="Status"
-                android:textSize="@dimen/text_xs"
-                android:textColor="@color/teal_200"
+                android:layout_marginEnd="24dp"
                 android:fontFamily="@font/open_sans_bold"
+                android:text="Status"
+                android:textColor="@color/teal_200"
+                android:textSize="@dimen/text_sm"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_facility_address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@{client.address}"
-                android:textColor="@color/main_text_color"
-                android:textSize="@dimen/text_xs"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_facility_name" />
-
-            <TextView
-                android:id="@+id/tv_facility_phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Akampka cam1"
-                android:layout_marginBottom="16dp"
-                android:textColor="@color/main_text_color"
-                android:textSize="@dimen/text_xs"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_facility_address" />
-
-            <TextView
-                android:id="@+id/tv_client_id_no"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="30dp"
-                android:textSize="@dimen/text_xs"
-                android:textColor="@color/teal_200"
-                tools:text="@{client.clientId}"
-                app:layout_constraintStart_toEndOf="@+id/tv_facility_address"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="24dp"
-                android:text="Away"
-                android:textColor="@color/main_text_color"
-                android:textSize="@dimen/text_xs"
-                app:layout_constraintEnd_toStartOf="@+id/tv_status"
-                app:layout_constraintStart_toEndOf="@+id/tv_client_id_no"
-                app:layout_constraintTop_toBottomOf="@+id/tv_time" />
-
-            <TextView
-                android:id="@+id/tv_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="24dp"
-                android:text="2 mins"
-                android:textSize="@dimen/text_xs"
-                android:textColor="@color/teal_200"
-                app:layout_constraintBottom_toTopOf="@+id/textView16"
-                app:layout_constraintEnd_toStartOf="@+id/tv_status"
-                app:layout_constraintHorizontal_bias="0.479"
-                app:layout_constraintStart_toEndOf="@+id/tv_client_id_no"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#c0c0c0"
-            android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" />
+           />
     </com.google.android.material.card.MaterialCardView>
 </layout>
