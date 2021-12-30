@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
+import com.jinncyapps.cdacsam.MainActivity
 import com.jinncyapps.cdacsam.R
 
 class SplashActivity : AppCompatActivity() {
@@ -18,8 +19,11 @@ class SplashActivity : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.statusBarColor = this.resources.getColor(R.color.purple_700)
 
-        Handler().postDelayed({
 
+
+
+        Handler().postDelayed({
+            startActivity(Intent(this,MainActivity::class.java))
             finish()
         }, 2500)
     }
