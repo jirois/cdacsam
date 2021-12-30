@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Cdasam</string>
+    <!-- splash screen text -->
+    <string name="app_subtitle">Community Daily Case <br /> Search and Activity  <br />  Manager</string>
+    <string name="Splash_screens_title">Quick tour</string>
+    <string name="splash_screen_one_title">Record Cases</string>
+    <string name="splash_screen_one_text">Gives you access to your records</string>
+    <string name="skip_btn_text">Skip</string>
+    <string name="splash_screen_two_title">Elicitation</string>
+    <string name="splash_screen_two_text">Elicit partners for guidance</string>
+    <string name="splash_screen_three_title">Client Proximity</string>
+    <string name="splash_screen_three_text">Locate where your client\'s partner are!</string>
+    <string name="splash_screen_four_title">Achievement</string>
+    <string name="splash_screen_four_text">See your achievement and how to improve.</string>
+    <string name="image_description">image</string>
+
+    <!-- Authentication -->
+    <string name="splash_onboarding_continue_btn_text">Continue</string>
+    <string name="login_page_title_text">LogIn</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="sign_up_page_title">Create Account</string>
+    <string name="sign_up_already_have_an_account_text">Already have an account?</string>
+    <string name="sign_in_here_request">Sign in here</string>
+    <string name="username_hint">Username</string>
+    <string name="term_and_condition_text"><![CDATA[T&C]]></string>
+    <string name="sign_up_text">Sign Up</string>
+
+    <!-- Landing strings -->
+    <string name="tv_achievement_title">Achievement</string>
+    <string name="tv_welcome_text">Welcome</string>
+    <string name="sub_welcome_text">Good Afternoon</string>
+    <string name="tv_add_client_title">Add Client</string>
+    <string name="tv_elicitation_title">Elicitation</string>
+    <string name="tv_facility_title">Facility</string>
+    <string name="tv_search_title">Search</string>
+    <string name="tv_notification_icon_tittle">Notification</string>
+    <string name="image_icon_description">icon image description</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="menu_profile_title">Profile</string>
+    <string name="menu_notification_title">Notification</string>
+    <string name="menu_settings_title">Settings</string>
+    <string name="menu_policy_title">Policy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_client">AddClientActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="sign_out_text">Sign Out</string>
+
+
+    <string name="search">Search</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="description">
+        Welcome to distance tracker, in order to continue using our Application
+        we will first need to request location permission from you. Otherwise we will
+        not be able to provide you with our service, if you agree and wish to continue
+        click on the button below.
+    </string>
+    <string name="btn_continue_text">Continue</string>
+
+</resources>

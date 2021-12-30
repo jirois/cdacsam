@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Splash Screen Dimens -->
+    <dimen name="splash_sub_text_size">18sp</dimen>
+    <dimen name="splash_main_text_size">24sp</dimen>
+    <dimen name="splash_onboarding_screens_title_text_size">18sp</dimen>
+    <dimen name="splash_screen_title_margin_top_size">44dp</dimen>
+    <dimen name="splash_screen_image_margin_top_size">42dp</dimen>
+    <dimen name="splash_screen_image_margin_start_size">16dp</dimen>
+    <dimen name="splash_screen_image_margin_end_size">16dp</dimen>
+    <dimen name="splash_screen_title_text_size">24sp</dimen>
+    <dimen name="splash_screen_text_size">18sp</dimen>
+    <dimen name="splash_screen_onboarding_image_width">250dp</dimen>
+    <dimen name="splash_screen_onboarding_image_height">240dp</dimen>
+    <dimen name="splash_screen_onboarding_title_margin_top_size">33dp</dimen>
+    <dimen name="splash_onboarding_btn_padding_bottom_size">7dp</dimen>
+    <dimen name="button_text_size">16sp</dimen>
+
+    <!-- General Textsizes  -->
+    <dimen name="text_xs">16sp</dimen>
+    <dimen name="text_sm">18sp</dimen>
+    <dimen name="text_xl">24sp</dimen>
+    <dimen name="text_xxl">32sp</dimen>
+
+    <!-- Authentication dimen -->
+    <dimen name="edit_input_margin_top_size_16dp">16dp</dimen>
+    <dimen name="edit_input_margin_start_size">24dp</dimen>
+    <dimen name="edit_input_margin_end_size">24dp</dimen>
+    <dimen name="edit_input_margin_top_size_33dp">33dp</dimen>
+    <dimen name="home_inner_linear_layout_padding_start">24dp</dimen>
+
+    <!-- General Dimen -->
+    <dimen name="space_44dp">44dp</dimen>
+    <dimen name="space_42dp">42dp</dimen>
+    <dimen name="space_default">16dp</dimen>
+    <dimen name="space_33dp">33dp</dimen>
+    <dimen name="space_24dp">24dp</dimen>
+    <dimen name="space_16dp">16dp</dimen>
+    <dimen name="home_icon_width">170dp</dimen>
+    <dimen name="home_icon_height">125dp</dimen>
+    <dimen name="sign_up_edit_text_height_size">55dp</dimen>
+    <dimen name="home_linear_layout_padding_10dp">10dp</dimen>
+    <dimen name="home_inner_linear_layout_padding_end">20dp</dimen>
+    <dimen name="tv_welcome_text_size_34sp">34sp</dimen>
+    <dimen name="space_5dp">5dp</dimen>
+    <dimen name="text_size_18dp">18sp</dimen>
+    <dimen name="home_title_text_margin_top_8dp">8dp</dimen>
+    <dimen name="space_60dp">60dp</dimen>
+    <dimen name="home_icon_margin_top_16dp">16dp</dimen>
+    <dimen name="space_64dp">64dp</dimen>
+    <dimen name="home_icon_margin_end_8dp">8dp</dimen>
+    <dimen name="home_icon_margin_start_8dp">8dp</dimen>
+
+    <!-- Dialog dimen -->
+    <dimen name="progress_dialog_content_padding">10dp</dimen>
+    <dimen name="progress_bar_size">50dp</dimen>
+    <dimen name="progress_text_marginStart">16dp</dimen>
+    <dimen name="progress_text_size">16sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="activity_toolbar_textsize">18sp</dimen>
+
+
+    <dimen name="height_of_nav_main">200dp</dimen>
+    <dimen name="nav_image_size">80dp</dimen>
+    <dimen name="nav_content_margin_StartEnd">16dp</dimen>
+    <dimen name="nav_content_margin_top">5dp</dimen>
+    <dimen name="nav_content_margin_bottom">10dp</dimen>
+    <dimen name="nav_user_name_text_size">18sp</dimen>
+    <dimen name="nav_image_circular_border_width">1dp</dimen>
+    <dimen name="nav_divider_height">0.5dp</dimen>
+</resources>
