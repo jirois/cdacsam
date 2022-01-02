@@ -15,4 +15,9 @@
         <item name="android:textColor">@color/main_text_color</item>
         <item name="android:textSize">28sp</item>
     </style>
+
+    <style name="BottomNavigationTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/teal_200</item>
+        <item name="android:textColorSecondary">@color/grey</item>
+    </style>
 </resources>

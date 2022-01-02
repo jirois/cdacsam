@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="Account" />
+
+        <item
+            android:id="@+id/homeFragment"
+            android:title="Home"
+            android:icon="@drawable/ic_home" />
+        <item
+            android:id="@+id/profileFragment"
+            android:title="Profile"
+            android:icon="@drawable/ic_profile2" />
+        <item
+            android:id="@+id/notificationFragment"
+            android:title="Notification"
+            android:icon="@drawable/ic_notifications" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Others" >
+            <menu>
+
+            <item
+                android:id="@+id/settingFragment"
+                android:title="Setting"
+                android:icon="@drawable/ic_settings" />
+            <item
+                android:id="@+id/privacyFragment"
+                android:title="Policy"
+                android:icon="@drawable/ic_policy" />
+                <item
+                android:id="@+id/signout"
+                android:title="Sign Out"
+                android:icon="@drawable/ic_sign_out" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

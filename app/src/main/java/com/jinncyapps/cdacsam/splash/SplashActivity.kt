@@ -1,12 +1,11 @@
 package com.jinncyapps.cdacsam.splash
 
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import com.jinncyapps.cdacsam.MainActivity
+import com.jinncyapps.cdacsam.ui.MainActivity
 import com.jinncyapps.cdacsam.R
 
 class SplashActivity : AppCompatActivity() {
@@ -23,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
 
 
         Handler().postDelayed({
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, 2500)
     }
