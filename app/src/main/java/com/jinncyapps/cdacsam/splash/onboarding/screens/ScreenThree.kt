@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.jinncyapps.cdacsam.R
+import com.jinncyapps.cdacsam.auth.AuthActivity
 import com.jinncyapps.cdacsam.databinding.FragmentScreenFourBinding
 import com.jinncyapps.cdacsam.databinding.FragmentScreenThreeBinding
 import com.jinncyapps.cdacsam.ui.MainActivity
@@ -22,7 +23,7 @@ class ScreenThree : Fragment() {
         binding = FragmentScreenThreeBinding.inflate(inflater, container, false)
 
         binding.tvBtnContinue.setOnClickListener {
-            startActivity(Intent(requireContext(), MainActivity::class.java))
+            startActivity(Intent(requireContext(), AuthActivity::class.java))
         }
         return binding.root
 

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".auth.signup.SignupFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_textinputlayout_username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/username_hint"
+            app:startIconDrawable="@drawable/ic_mail"
+            app:helperText="Required"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:helperTextTextColor="@color/error_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_signup_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/signup_textinputlayout_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/email_hint"
+            app:startIconDrawable="@drawable/ic_mail"
+            app:helperText="Required"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:helperTextTextColor="@color/error_color"
+            app:layout_constraintEnd_toEndOf="@+id/signup_textinputlayout_username"
+            app:layout_constraintStart_toStartOf="@+id/signup_textinputlayout_username"
+            app:layout_constraintTop_toBottomOf="@+id/signup_textinputlayout_username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/signup_textinputlayout_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:helperText="Required"
+            app:helperTextTextColor="@color/error_color"
+            app:passwordToggleEnabled="true"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="@+id/signup_textinputlayout_email"
+            app:layout_constraintStart_toStartOf="@+id/signup_textinputlayout_email"
+            app:layout_constraintTop_toBottomOf="@+id/signup_textinputlayout_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_signup_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/cb_terms_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:buttonTint="@color/teal_200"
+            android:text="By checking the box you agree to our"
+            android:textColor="@color/main_text_color"
+            android:textSize="@dimen/text_xs"
+            app:layout_constraintStart_toStartOf="@+id/signup_textinputlayout_password"
+            app:layout_constraintTop_toBottomOf="@+id/signup_textinputlayout_password" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/term_and_condition_text"
+            android:textColor="@color/teal_200"
+            android:textSize="@dimen/text_xs"
+            app:layout_constraintStart_toEndOf="@+id/cb_terms_condition"
+            app:layout_constraintTop_toTopOf="@+id/cb_terms_condition" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/shape_button_rounded_green"
+            android:fontFamily="@font/open_sans_bold"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="@string/sign_up_text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_terms_condition" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

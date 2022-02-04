@@ -10,10 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cdasam">
         <activity
+            android:name=".auth.AuthActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+            />
+        <activity
             android:name=".splash.onboarding.OnboardingActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".splash.SplashActivity"
             android:exported="true"
@@ -29,7 +33,7 @@
             android:name=".ui.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"></activity>
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"
