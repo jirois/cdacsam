@@ -79,6 +79,7 @@
             app:helperTextTextColor="@color/error_color"
             app:passwordToggleEnabled="true"
             app:backgroundTint="@null"
+
             >
 
             <com.google.android.material.textfield.TextInputEditText

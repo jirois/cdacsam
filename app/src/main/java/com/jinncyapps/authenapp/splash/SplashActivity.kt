@@ -12,7 +12,8 @@ import com.jinncyapps.authenapp.R
 import com.jinncyapps.authenapp.firebase.FirestoreClass
 
 
-class SplashActivity : AppCompatActivity() {
+class
+SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)

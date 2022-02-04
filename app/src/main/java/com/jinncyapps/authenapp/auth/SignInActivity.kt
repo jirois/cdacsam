@@ -15,6 +15,7 @@ import com.jinncyapps.authenapp.LandingActivity
 import com.jinncyapps.authenapp.R
 import com.jinncyapps.authenapp.databinding.ActivitySignInBinding
 import com.jinncyapps.authenapp.firebase.FirestoreClass
+import com.jinncyapps.authenapp.permission.PermissionActivity
 
 class SignInActivity : BaseActivity() {
     private lateinit var binding: ActivitySignInBinding
@@ -97,7 +98,7 @@ class SignInActivity : BaseActivity() {
             Toast.LENGTH_LONG
         ).show()
 
-        startActivity(Intent(this@SignInActivity, LandingActivity::class.java))
+        startActivity(Intent(this@SignInActivity, PermissionActivity::class.java))
         finish()
         return
 

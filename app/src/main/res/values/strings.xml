@@ -58,6 +58,14 @@
 
 
     <string name="search">Search</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="description">
+        Welcome to distance tracker, in order to continue using our Application
+        we will first need to request location permission from you. Otherwise we will
+        not be able to provide you with our service, if you agree and wish to continue
+        click on the button below.
+    </string>
+    <string name="btn_continue_text">Continue</string>
 
 
 </resources>

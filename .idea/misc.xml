@@ -11,21 +11,31 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/activity_landing.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/activity_notification.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/activity_permission.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/activity_profile.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/activity_sign_in.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/dialog_progress.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/facility_list_item.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_elicit_client_details.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_elicit_detail.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_facility.xml" value="0.10371376811594203" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_facility_google_map.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_partner_list.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_screen__four.xml" value="0.1526268115942029" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_screen__one.xml" value="0.1526268115942029" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_screen__three.xml" value="0.1526268115942029" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_screen__two.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_setting.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/fragment_view_pager.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/landing_body.xml" value="0.11614583333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/main_toolbar.xml" value="0.10371376811594203" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/nav_drawer.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/nav_header.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/partner_list_item.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/layout/placeholder_recyclerview_layout.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/cdacsam/app/src/main/res/menu/nav_items.xml" value="0.17864583333333334" />
       </map>
     </option>
   </component>

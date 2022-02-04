@@ -27,16 +27,14 @@ class ElicitClientDetails : Fragment(), OnMapReadyCallback {
         // Inflate the layout for this fragment
         binding =  DataBindingUtil.inflate(inflater,R.layout.fragment_elicit_client_details, container, false)
 
-
-        binding.tvName.text = args.currentClient.elicit_name
-        binding.tvDesc.text = args.currentClient.elicit_address
+        binding.apply {
+            tvName.text = args.currentClient.elicit_name
+            tvDesc.text = args.currentClient.elicit_address
+        }
 
 
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(this)
-
-
-
 
 
         return binding.root

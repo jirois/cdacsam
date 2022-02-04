@@ -37,21 +37,7 @@
                 tool:text="Case Manager"
                 />
         </LinearLayout>
-<!--        <com.google.android.material.imageview.ShapeableImageView-->
-<!--            android:id="@+id/nav_image"-->
-<!--            android:layout_width="65dp"-->
-<!--            android:layout_height="65dp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:background="@color/purple_700"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            app:shapeAppearance="@style/nav_style"-->
-<!--            app:srcCompat="@drawable/ic_image_holder"-->
-<!--            app:strokeWidth="2dp"-->
-<!--            app:strokeColor="@color/grey"-->
-<!--            android:padding="6dp"-->
 
-
-<!--            />-->
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_user_image"
             android:layout_width="@dimen/nav_image_size"

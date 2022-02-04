@@ -11,6 +11,7 @@ import com.jinncyapps.authenapp.activities.ProfileActivity
 import com.jinncyapps.authenapp.auth.SignInActivity
 import com.jinncyapps.authenapp.auth.SignUpActivity
 import com.jinncyapps.authenapp.model.User
+import com.jinncyapps.authenapp.permission.PermissionActivity
 import com.jinncyapps.authenapp.utils.Constants
 
 class FirestoreClass {
@@ -48,6 +49,7 @@ class FirestoreClass {
                     is LandingActivity -> {
                         activity.updateNavigationUserSuccess(loggedUser)
                     }
+
                     is ProfileActivity -> {
                         activity.userUI(loggedUser)
                     }
@@ -61,6 +63,9 @@ class FirestoreClass {
                         activity.hideProgressDialog()
                     }
                     is LandingActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                    is PermissionActivity -> {
                         activity.hideProgressDialog()
                     }
                 }

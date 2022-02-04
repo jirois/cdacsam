@@ -1,6 +1,7 @@
 package com.jinncyapps.authenapp.utils
 
 import android.Manifest
+import android.app.Activity
 import android.content.Context
 import androidx.fragment.app.Fragment
 import com.jinncyapps.authenapp.utils.Constants.PERMISSION_LOCATION_REQUEST_CODE
@@ -13,9 +14,9 @@ object Permissions {
             Manifest.permission.ACCESS_FINE_LOCATION
         )
 
-    fun requestLocationPermission(fragment: Fragment){
+    fun requestLocationPermission(activity: Activity){
         EasyPermissions.requestPermissions(
-            fragment,
+            activity,
             "This application can not work without location permission",
             PERMISSION_LOCATION_REQUEST_CODE,
             Manifest.permission.ACCESS_FINE_LOCATION
